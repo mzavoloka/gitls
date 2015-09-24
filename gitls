@@ -25,6 +25,7 @@ reset=$(tput sgr0)
 
 # format definitions
 filename_format="$blue$bold"
+dirname_format="$reset$bold"
 file_numbers_format="$brown"
 
 
@@ -57,9 +58,16 @@ for f in $FILES; do
   if [ -d "$f" ]; then
     printf "$filename_format"
   else
-    printf "$reset$bold"
+    printf "$dirname_format"
   fi
-  printf "%-${MAXLEN}s$reset -- %s\n" "$f" "$str"
+
+  if [ -d "$f" ]; then
+    f="$f/"
+  fi
+
+  printf "%-${MAXLEN}s$reset" "$f"
+
+  printf " -- %s\n" "$str"
   i=$((i + 1))
 done
 
