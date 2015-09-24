@@ -5,8 +5,10 @@ This is a modification of a script that was provided in this stackoverflow.com q
 http://stackoverflow.com/questions/17359370/git-show-last-commit-date-and-message-for-each-file-in-directory-like-github
 
 I have the following alias in my .bashrc:
+```shell
 alias gitls="bash ~/scripts/gitls"
+```
 
 ![Pretty git ls-tree](/gitls.png?raw=true "Example output")
 
-Tested only in gnome-terminal on Ubuntu 14.10
+Tested only in gnome-terminal on Ubuntu 14.10.
