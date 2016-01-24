@@ -14,5 +14,6 @@ alias gitls="bash ~/scripts/gitls"
 ![Pretty git ls-tree](/gitls.png?raw=true "Example output")
 
 Tested:
-- in gnome-terminal on Ubuntu 14.10.
+- in gnome-terminal on Ubuntu 14.10
 - in gnome-terminal on Ubuntu 12.04.5 LTS (with upgraded git version 2.6.3!)
+- in urxvt on Ubuntu 14.04
