@@ -6,10 +6,11 @@ IFS=$(echo -en "\n\b")
 counter=0
 for f in $FILES; do
     if [ ${#f} -gt $MAXLEN ]; then
-        MAXLEN=${#f}
+        MAXLEN=${#f};
     fi
     counter=$((counter + 1))
 done
+MAXLEN=$((MAXLEN+1)) # Consider slash at the end of dirname
 
 number_of_files=$counter
 space_for_file_numbers=${#number_of_files}
