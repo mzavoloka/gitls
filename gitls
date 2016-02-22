@@ -24,8 +24,8 @@ bold=$(tput bold)
 reset=$(tput sgr0)
 
 # format definitions
-filename_format="$blue$bold"
-dirname_format="$reset$bold"
+filename_format="$normal"
+dirname_format="$reset$blue$bold"
 file_numbers_format="$brown"
 
 
@@ -56,9 +56,9 @@ for f in $FILES; do
 
   str=$(git log -1 --pretty=format:"%<(23)%C(green)%cr%C(white) | %C(cyan)%h%C(white) | %<(15)%C(yellow)%cn%C(white) | %s" $f)
   if [ -d "$f" ]; then
-    printf "$filename_format"
-  else
     printf "$dirname_format"
+  else
+    printf "$filename_format"
   fi
 
   if [ -d "$f" ]; then
