@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
-FILES=`git ls-tree --name-only HEAD .`
+FILES=$(git ls-tree --name-only HEAD .)
 MAXLEN=0
-IFS=$(echo -en "\n\b")
+IFS=$(printf "\n\b")
 counter=0
 for f in $FILES; do
     if [ ${#f} -gt $MAXLEN ]; then
