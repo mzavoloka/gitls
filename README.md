@@ -4,7 +4,7 @@ Lists current git directory in pretty human readable format.
 Shows file name, when it was changed, abbreviated commit hash, author and commit message. Just like github does, but a little bit better!
 This information is really useful when you're getting acquainted with some repository that is unfamiliar to you. 
 
-This is a modification of a script that was provided in on of the answers to this stackoverflow.com question:
+This is a modification of a script that was provided in one of the answers to this stackoverflow.com question:
 http://stackoverflow.com/questions/17359370/git-show-last-commit-date-and-message-for-each-file-in-directory-like-github
 
 I have the following alias in my .bashrc:
