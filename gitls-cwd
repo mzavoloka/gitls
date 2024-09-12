@@ -55,7 +55,8 @@ for f in $FILES; do
   # fi
 
 
-  str=$(git log -1 --pretty=format:"%<(23)%C(green)%cr%C(white) | %C(cyan)%h%C(white) | %<(15)%C(yellow)%cn%C(white) | %s" -- $f)
+  str=$(git log -1 --color --pretty=format:"%<(23)%C(green)%cr%C(white) | %C(cyan)%h%C(white) | %<(15)%C(yellow)%cn%C(white) | %s" -- $f)
+  echo $str > dumpedstr
   if [ -d "$f" ]; then
     printf "$dirname_format"
   else
@@ -66,9 +67,8 @@ for f in $FILES; do
     f="$f/"
   fi
 
-  printf "%-${MAXLEN}s$reset" "$f"
+  printf "%-${MAXLEN}s$reset -- %s\n" "$f" "$str"
 
-  printf " -- %s\n" "$str"
   i=$((i + 1))
 done
 
